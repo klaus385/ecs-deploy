@@ -10,13 +10,14 @@ pipeline {
           }
         }
       }
+    }
      stage('Deploy') {
-      steps {
-          sh """
+       steps {
+         sh """
            docker tag ecsdeploy pwolfbees-docker.jfrog.io/pwolfbees/tools/ecsdeploy:latest
            docker push pwolfbees-docker.jfrog.io/pwolfbees/tools/ecsdeploy:latest
            """
-          }
-      }
-   }
+       }
+     }
+  }
 }
