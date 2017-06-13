@@ -5,7 +5,7 @@ pipeline {
     stage('Build') {
       steps {
         script {
-          docker.withRegistry(''https://pwolfbees-docker.jfrog.io', 'artifactory') {
+          docker.withRegistry('https://pwolfbees-docker.jfrog.io', 'artifactory') {
             sh "docker build -t ecsdeploy ."
           }
         }
