@@ -11,5 +11,4 @@ COPY test.bats /test.bats
 COPY run-tests.sh /run-tests.sh
 RUN chmod a+x /run-tests.sh
 
-ENV PATH="/ecs-deploy:${PATH}"
-
+ENTRYPOINT ["/ecs-deploy"]
